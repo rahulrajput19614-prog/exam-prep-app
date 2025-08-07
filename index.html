@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Prep App - Final Version</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div id="app-wrapper" class="w-full max-w-7xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div id="view-container" class="h-screen">
+            <!-- App content will be rendered here by JavaScript -->
+        </div>
+    </div>
+    
+    <div id="ai-modal" class="fixed inset-0 bg-black bg-opacity-60 items-center justify-center p-4 z-50" style="display: none;">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-[80vh] flex flex-col">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h2 class="text-xl font-bold text-indigo-700">✨ AI Doubt Solver</h2>
+                <button id="close-ai-modal" class="text-2xl font-bold text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div id="ai-modal-content" class="p-6 overflow-y-auto prose"></div>
+        </div>
+    </div>
+    
+    <div id="recaptcha-container" style="position: fixed; bottom: 0; right: 0; z-index: -1;"></div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
